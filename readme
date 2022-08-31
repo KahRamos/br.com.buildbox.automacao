@@ -1,6 +1,6 @@
-Projeto: AutomaçãoNeon
+Projeto: AutomaçãoBuildbox
 
-Este projeto consiste em um teste para ingressar na área de QA no banco neon.
+Este projeto consiste em um teste para ingressar na área de QA no Buildbox.
 
 Começando:
 Para executar o projeto, será necessário instalar os seguintes programas:
@@ -12,7 +12,7 @@ Para executar o projeto, será necessário instalar os seguintes programas:
 Desenvolvimento e execução:
 Para iniciar o projeto, é necessário clonar o projeto do GitHub no diretório de sua preferência:
    -cd "diretório de sua preferência"
-   -git clone git@github.com:SidConstanci/br.com.buildbox.automacao.git
+   -git clone git@github.com:KahRamos/br.com.buildbox.automacao.git
 
 Construção:
 Para construir o projeto com o Maven, execute os comando abaixo:
