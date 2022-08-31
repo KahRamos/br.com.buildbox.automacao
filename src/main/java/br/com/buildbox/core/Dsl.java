@@ -16,7 +16,7 @@ public class Dsl {
     /********* TextField e TextArea ************/
 
     public void Escreve(By by, String texto) {
-        getDriver().findElement(by).clear();
+        //getDriver().findElement(by).clear();
         getDriver().findElement(by).sendKeys(texto);
     }
 
@@ -264,5 +264,11 @@ public class Dsl {
         List<WebElement> botoes = getDriver().findElements(by);
         botoes.get(index).click();
         return botoes;
+    }
+
+    /*********** UpLoad de arquivos ***************/
+
+    public void upLoad(By by, String arquivo){
+        getDriver().findElement(by).sendKeys(arquivo);
     }
 }

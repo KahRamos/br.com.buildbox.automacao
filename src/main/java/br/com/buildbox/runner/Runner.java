@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = {"br.com.buildbox.steps"},
-        tags = {"@homePage"},
+        tags = {"@validarsemnome"},
         monochrome = true,
         dryRun = false,
         plugin = {"pretty",

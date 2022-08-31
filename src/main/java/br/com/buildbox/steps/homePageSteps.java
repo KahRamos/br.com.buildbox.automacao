@@ -3,7 +3,7 @@ package br.com.buildbox.steps;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
-public class homePage {
+public class homePageSteps {
 
     private br.com.buildbox.pages.homePage homepage = new br.com.buildbox.pages.homePage();
 
