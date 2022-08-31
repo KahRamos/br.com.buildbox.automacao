@@ -8,10 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = {"br.com.buildbox.steps"},
-        tags = {"@validarsemnome"},
+        tags = {"@fullSmoke"},
         monochrome = true,
         dryRun = false,
         plugin = {"pretty",
+
                 "html:target/cucumber-reports",
                 "json:target/cucumber-reports/cucumber.json",
                 "junit:target/cucumber-reports/cucumber.xml",

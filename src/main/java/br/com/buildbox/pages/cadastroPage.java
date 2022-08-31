@@ -10,18 +10,18 @@ import static br.com.buildbox.core.driverFactory.getDriver;
 
 public class cadastroPage {
 
-    private  Dsl dsl;
+    private Dsl dsl;
 
     public cadastroPage() {
         this.dsl = new Dsl();
     }
 
-    public void entrarUrl(){
+    public void entrarUrl() {
         getDriver().get("https://buger-eats.vercel.app/deliver");
-        dsl.espraInplicita(100000, TimeUnit.SECONDS );
+        dsl.espraInplicita(100000, TimeUnit.SECONDS);
     }
 
-    public void name(){
+    public void name() {
         dsl.Escreve(By.xpath("//*[@id=\"page-deliver\"]/form/fieldset[1]/div[1]/div[1]/input"), "Roberto Alves");
     }
 
@@ -53,23 +53,17 @@ public class cadastroPage {
         dsl.ClicarBotao(By.xpath("//*[@id=\"page-deliver\"]/form/fieldset[3]/ul/li[1]/img"));
     }
 
-    public void cnh(){
+    public void cnh() {
         //dsl.ClicarBotao(By.xpath("//*[@id=\"page-deliver\"]/form/div/p/svg"));
-        dsl.upLoad(By.xpath("//*[@id=\"page-deliver\"]/form/div/p/svg/path"),"C:\\Users\\KARINA\\Workspace\\Projetos\\br.com.buildbox.automacao\\target\\imagem");
+        dsl.upLoad(By.xpath("//*[@id=\"page-deliver\"]/form/div/p/svg/path"), "C:\\Users\\KARINA\\Workspace\\Projetos\\br.com.buildbox.automacao\\target\\imagem");
     }
 
-    public void clicarBotaoCadastro(){
+    public void clicarBotaoCadastro() {
         dsl.ClicarBotao(By.xpath("//*[@id=\"page-home\"]/div/main/a/span/svg"));
     }
 
-    public void validarCadastro(){
+    public void validarCadastro() {
         Assert.assertEquals("Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato.", dsl.ObterTexto(By.xpath("//*[@id=\"swal2-html-container\"]")));
     }
 
-    public void nenhumcampopreenchido(){
-        dsl.Escreve(By.xpath("//*[@id=\"page-deliver\"]/form/fieldset[1]/div[1]/div[1]/input"), "");
-    }
-    public void validarmensagem(){
-        Assert.assertEquals("É necessário informar o nome", dsl.ObterTexto(By.xpath("//*[@id=\"page-deliver\"]/form/fieldset[1]/div[1]/div[1]/span")));
-    }
 }
